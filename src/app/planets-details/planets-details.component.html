@@ -1,0 +1,67 @@
+<a [routerLink]="['/']">BACK</a>
+<div *ngIf="planet != null">
+  <table>
+    <tr>
+      <td>Name of planet:</td>
+      <td>{{ planet.name }}</td>
+    </tr>
+    <tr>
+      <td>Rotation period:</td>
+      <td>{{ planet.rotation_period }}</td>
+    </tr>
+    <tr>
+      <td>Orbital period:</td>
+      <td>{{ planet.orbital_period }}</td>
+    </tr>
+    <tr>
+      <td>Diameter:</td>
+      <td>{{ planet.diameter }}</td>
+    </tr>
+    <tr>
+      <td>Climate:</td>
+      <td>{{ planet.climate }}</td>
+    </tr>
+    <tr>
+      <td>Gravity:</td>
+      <td>{{ planet.gravity }}</td>
+    </tr>
+    <tr>
+      <td>Terrain:</td>
+      <td>{{ planet.terrain }}</td>
+    </tr>
+    <tr>
+      <td>Surface water:</td>
+      <td>{{ planet.surface_water }}</td>
+    </tr>
+    <tr>
+      <td>Population:</td>
+      <td>{{ planet.population }}</td>
+    </tr>
+    <tr>
+      <td>Residents:</td>
+      <td *ngFor="let people of planet.residents">
+        <a [routerLink]="['/people', people]">{{ people }}</a>
+      </td>
+    </tr>
+    <tr>
+      <td>Films:</td>
+      <td *ngFor="let film of planet.films">
+        <a [routerLink]="['/films', film]">{{ film }}</a>
+      </td>
+    </tr>
+    <tr>
+      <td>Created:</td>
+      <td>{{ planet.created }}</td>
+    </tr>
+    <tr>
+      <td>Edited:</td>
+      <td>{{ planet.edited }}</td>
+    </tr>
+    <tr>
+      <td>url:</td>
+      <td>
+        <a [routerLink]="[planet.url]">{{ planet.url }}</a>
+      </td>
+    </tr>
+  </table>
+</div>

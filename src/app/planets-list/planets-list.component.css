@@ -1,0 +1,32 @@
+div{
+  width: 300px;
+  margin: 10px auto;
+  margin-bottom: 5px;
+  padding: 10px;
+  border: 2px dashed #cccccc;
+  color: #cc0000;
+  text-align: center;
+  background-color: lawngreen;
+}
+h1 {
+  font-family: 'Franklin Gothic Medium';
+  text-align: center;
+}
+a{
+  font-family: 'Franklin Gothic Medium';
+  font-size: 18px;
+  color: blue;
+  text-decoration: none;
+}
+a:hover,
+button:hover,
+#planets:hover {
+  background-color: #ddd;
+  color: black;
+}
+mat-paginator {
+  font-family: Roboto, Arial, sans-serif;
+  width: 550px;
+  margin: 10px auto;
+  padding: 10px;
+}

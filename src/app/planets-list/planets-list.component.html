@@ -1,0 +1,18 @@
+<div>
+  <h1>List of Planet</h1>
+  <input
+    type="text"
+    (change)="onSearch($event)"
+    placeholder="search the planet"/>
+</div>
+<div *ngFor="let planet of planetsList" id="planets">
+  <a [routerLink]="[planet.id]">{{ planet.id }}. {{ planet.name }}</a>
+</div>
+<mat-paginator #paginator
+    [length]="length"
+    [pageSize]="pageSize"
+    [pageSizeOptions]="pageSizeOptions"
+    [showFirstLastButtons]="true"
+    (page)="onPageChange($event)">
+</mat-paginator>
+
